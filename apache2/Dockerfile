@@ -1,5 +1,7 @@
 FROM phusion/baseimage:latest
 
+MAINTAINER flurdy
+
 RUN apt-get update
 RUN apt-get install -y apache2
 RUN apt-get clean
