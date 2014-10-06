@@ -1,7 +1,7 @@
 # Typesafe Activator Minimal
 
 # Change to your own java image
-FROM flurdy/java7:latest
+FROM flurdy/oracle-java7:latest
 
 MAINTAINER flurdy
 
