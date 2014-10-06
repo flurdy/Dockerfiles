@@ -14,3 +14,4 @@ RUN echo /usr/bin/debconf shared/accepted-oracle-license-v1-1 select true | /usr
 RUN apt-get install -y oracle-java6-installer
 RUN apt-get install -y oracle-java6-set-default
 RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*

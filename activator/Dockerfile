@@ -17,4 +17,5 @@ RUN ln -s /opt/typesafe/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/ac
 RUN rm /tmp/typesafe-activator-$ACTIVATOR_VERSION.zip
 
 RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
 
