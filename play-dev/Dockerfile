@@ -1,7 +1,7 @@
 # Play! Framework development container
 
 # Change to your own activator image
-FROM flurdy/activator:latest
+FROM flurdy/activator-mini:latest
 
 MAINTAINER flurdy
 
