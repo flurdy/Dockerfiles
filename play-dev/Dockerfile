@@ -22,10 +22,11 @@ WORKDIR /var/local/playapp
 
 # Additional optional play configurations and variables via arguments
 # For Play! v2.2 use play binary
-ENTRYPOINT /usr/local/bin/activator
-# ENTRYPOINT /usr/local/bin/play
+ENTRYPOINT ["/usr/local/bin/activator"]
+# ENTRYPOINT "[/usr/local/bin/play"]
 
 # Example
 # Expose application on port 49900
 # Mount local path to /var/local/playapp
-# docker run -ti -p 49900:9000 -v pathtoyourapp:/var/local/playapp:rw flurdy/play-dev
+# docker run -ti --rm -p 49900:9000 \
+#    -v pathtoyourapp:/var/local/playapp:rw flurdy/play-dev

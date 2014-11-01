@@ -1,0 +1,24 @@
+# Custom SSH preferences
+# e.g. default usernames, ports, bastions
+# Note disabling host checking is useful if using bastions, though less secure
+
+# Host aserver1
+# Hostname aserver1.example.com
+
+# Host aserver2
+# Hostname aserver2.example.com
+# User notmeuser
+
+# Host aserver2
+# Hostname 192.168.200.88
+# ProxyCommand ssh -oStrictHostKeyChecking=no -q -p 22 myuser@bastion.example.net "nc -w 3600 %h %p"
+
+# Host aserver3
+# Hostname 192.168.200.99
+# Port 2222
+# User auser
+# ForwardAgent yes
+# ProxyCommand ssh -oStrictHostKeyChecking=no -q -p 22 myuser@bastion.example.net "nc -w 3600 %h %p"
+
+
+
