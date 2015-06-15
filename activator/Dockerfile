@@ -12,7 +12,7 @@ RUN apt-get update && \
   apt-get clean -yq && \
   rm -rf /var/lib/apt/lists/*
 
-ENV ACTIVATOR_VERSION 1.3.2
+ENV ACTIVATOR_VERSION 1.3.4
 
 RUN cd /tmp && \
   wget http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip && \
