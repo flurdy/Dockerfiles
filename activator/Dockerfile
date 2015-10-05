@@ -15,7 +15,7 @@ RUN apt-get update && \
 ENV ACTIVATOR_VERSION 1.3.4
 
 RUN cd /tmp && \
-  wget http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip && \
+  wget  --progress=dot:mega http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip && \
   unzip typesafe-activator-$ACTIVATOR_VERSION.zip && \
   mkdir /opt/typesafe && \
   mv /tmp/activator-$ACTIVATOR_VERSION /opt/typesafe/activator-$ACTIVATOR_VERSION && \
