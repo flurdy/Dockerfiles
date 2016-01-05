@@ -1,6 +1,6 @@
 # Typesafe Activator Minimal
 
-FROM flurdy/oracle-java8:8u66
+FROM java:openjdk-8u66-jdk
 
 MAINTAINER flurdy
 
@@ -16,7 +16,7 @@ ENV ACTIVATOR_VERSION 1.3.7
 
 RUN cd /tmp && \
   wget http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
-  unzip typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
+  unzip -qq typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
   mkdir /opt/typesafe && \
   mv /tmp/activator-$ACTIVATOR_VERSION-minimal /opt/typesafe/activator-$ACTIVATOR_VERSION && \
   ln -s /opt/typesafe/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/activator && \
