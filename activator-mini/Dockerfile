@@ -1,6 +1,6 @@
 # Typesafe Activator Minimal
 
-FROM flurdy/oracle-java7:latest
+FROM flurdy/oracle-java8:8u66
 
 MAINTAINER flurdy
 
@@ -12,7 +12,7 @@ RUN apt-get update && \
   apt-get clean -yq && \
   rm -rf /var/lib/apt/lists/*
 
-ENV ACTIVATOR_VERSION 1.2.10
+ENV ACTIVATOR_VERSION 1.3.7
 
 RUN cd /tmp && \
   wget http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \

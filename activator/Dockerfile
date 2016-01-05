@@ -1,6 +1,6 @@
 # Typesafe Activator
 
-FROM flurdy/oracle-java7:latest
+FROM flurdy/oracle-java8:8u66
 
 MAINTAINER flurdy
 
@@ -12,12 +12,12 @@ RUN apt-get update && \
   apt-get clean -yq && \
   rm -rf /var/lib/apt/lists/*
 
-ENV ACTIVATOR_VERSION 1.3.4
+ENV ACTIVATOR_VERSION 1.3.7
 
 RUN cd /tmp && \
   wget  --progress=dot:mega http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip && \
   unzip typesafe-activator-$ACTIVATOR_VERSION.zip && \
   mkdir /opt/typesafe && \
-  mv /tmp/activator-$ACTIVATOR_VERSION /opt/typesafe/activator-$ACTIVATOR_VERSION && \
+  mv /tmp/activator-dist-$ACTIVATOR_VERSION /opt/typesafe/activator-$ACTIVATOR_VERSION && \
   ln -s /opt/typesafe/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/activator && \
   rm /tmp/typesafe-activator-$ACTIVATOR_VERSION.zip
