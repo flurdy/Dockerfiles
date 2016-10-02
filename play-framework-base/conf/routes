@@ -1,0 +1,2 @@
+
+GET /health/ping        controllers.HealthController.ping
