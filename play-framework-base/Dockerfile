@@ -1,4 +1,4 @@
-FROM openjdk:8u92-jdk-alpine
+FROM openjdk:8u111-jdk-alpine
 
 MAINTAINER Ivar Abrahamsen <@flurdy>
 
