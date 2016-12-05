@@ -8,9 +8,10 @@ RUN apk update && apk add bash wget unzip
 
 ENV ACTIVATOR_VERSION 1.3.12
 
-RUN cd /tmp && \
-  wget http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
+WORKDIR /opt/build
+
+RUN wget  --progress=dot:mega http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
   unzip -qq typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
-  mv /tmp/activator-$ACTIVATOR_VERSION-minimal /opt/activator && \
+  mv activator-$ACTIVATOR_VERSION-minimal /opt/activator && \
   ln -s /opt/activator/bin/activator /usr/local/bin/activator && \
-  rm /tmp/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip
+  rm -f typesafe-activator-$ACTIVATOR_VERSION-minimal.zip
