@@ -1,4 +1,4 @@
-# Typesafe Activator Minimal
+# Lightbend Activator Minimal
 
 FROM java:openjdk-8u111-jdk-alpine
 
@@ -8,7 +8,7 @@ RUN apk update && apk add bash wget unzip
 
 ENV ACTIVATOR_VERSION 1.3.12
 
-WORKDIR /opt/build
+WORKDIR /opt
 
 RUN wget  --progress=dot:mega http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
   unzip -qq typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \

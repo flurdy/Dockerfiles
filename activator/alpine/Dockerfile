@@ -1,16 +1,10 @@
 # Lightbend Activator
 
-FROM java:openjdk-8u111-jdk
+FROM java:openjdk-8u111-jdk-alpine
 
 MAINTAINER Ivar Abrahamsen <@flurdy>
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update && \
-  apt-get install -yq wget unzip && \
-  apt-get autoremove -yq && \
-  apt-get clean -yq && \
-  rm -rf /var/lib/apt/lists/*
+RUN apk update && apk add bash wget unzip
 
 ENV ACTIVATOR_VERSION 1.3.12
 
