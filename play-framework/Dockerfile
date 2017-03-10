@@ -1,4 +1,4 @@
-FROM openjdk:8u111-jdk-alpine
+FROM openjdk:8u121-jdk-alpine
 
 MAINTAINER Ivar Abrahamsen <@flurdy>
 
@@ -20,7 +20,6 @@ RUN wget -q --show-progress http://downloads.typesafe.com/typesafe-activator/$AC
     mv activator-$ACTIVATOR_VERSION-minimal activator && \
     ln -s /opt/activator/bin/activator /usr/local/bin/activator && \
     rm -f typesafe-activator-$ACTIVATOR_VERSION-minimal.zip
-
 
 WORKDIR /opt/build
 

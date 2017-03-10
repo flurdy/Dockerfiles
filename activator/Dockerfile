@@ -1,6 +1,6 @@
 # Lightbend Activator
 
-FROM java:openjdk-8u111-jdk
+FROM java:openjdk-8u121-jdk
 
 MAINTAINER Ivar Abrahamsen <@flurdy>
 
