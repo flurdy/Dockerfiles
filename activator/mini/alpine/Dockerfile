@@ -1,6 +1,6 @@
 # Lightbend Activator Minimal
 
-FROM java:openjdk-8u121-jdk-alpine
+FROM openjdk:8u121-jdk-alpine
 
 MAINTAINER Ivar Abrahamsen <@flurdy>
 
