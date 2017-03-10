@@ -13,15 +13,20 @@ ENV ACTIVATOR_VERSION 1.3.12
 
 WORKDIR /opt
 
+COPY play-scala-starter-example/project /opt/play-project
+
 RUN wget -q --show-progress http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
     unzip -qq typesafe-activator-$ACTIVATOR_VERSION-minimal.zip && \
     mv activator-$ACTIVATOR_VERSION-minimal activator && \
     ln -s /opt/activator/bin/activator /usr/local/bin/activator && \
     rm -f typesafe-activator-$ACTIVATOR_VERSION-minimal.zip
 
+
 WORKDIR /opt/build
 
 RUN /opt/activator/bin/activator new playframework-base play-scala && \
     cd playframework-base && \
+    rm -rf project && \
+    mv /opt/play-project project && \
     /opt/activator/bin/activator stage && \
     rm -rf /opt/build
