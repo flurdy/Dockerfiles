@@ -2,10 +2,6 @@ FROM flurdy/activator-mini:1.3.12-alpine
 
 MAINTAINER Ivar Abrahamsen <@flurdy>
 
-RUN apk update && apk add bash wget unzip
-
-ENV ACTIVATOR_HOME /opt/activator
-
 RUN mkdir -p /opt/build && \
     mkdir -p $HOME/.sbt/0.13
 

@@ -8,7 +8,7 @@ scalaVersion := "2.11.8"
 
 libraryDependencies ++= {
    val enumeratumVersion = "1.5.8"
-   libraryDependencies ++= Seq(
+   Seq(
       jdbc,
       evolutions,
       cache,
